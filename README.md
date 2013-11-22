@@ -95,7 +95,7 @@ If you decide to use Fontysfaction as a view, you can define it in your xml layo
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Hey, this is a regular TextView Fontysfaction"
-    fonty="regular" />
+    fonty:font="regular" />
 
 <com.fattorini.luca.android.fontysfaction.view.FontyButton
     xmlns:fonty="http://schemas.android.com/apk/res-auto"
