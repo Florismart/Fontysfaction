@@ -5,9 +5,31 @@ Fontysfaction is an Open Source Android library that allows developers to easily
 
 Setup
 -----
-* In Eclipse, just import the library as an Android library project. Project > Clean to generate the binaries 
+__1.__ In Eclipse, import the library as an Android library project. Project > Clean to generate the binaries 
 you need, like R.java, etc.
-* Then, just add Fontysfaction as a dependency to your existing project and you're good to go!
+
+__2.__ Then, add Fontysfaction as a dependency to your existing project.
+
+__3.__ At Last quick setup your application class and you are good to go!
+
+```java
+public class TestApplication extends Application {
+
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		
+		//Create a base FontyConfiguration and initialize FontyLoader
+		FontyConfiguration configuration = FontyConfigurationBuilder.builder()
+		    ...		
+		    .build();
+		FontyLoader.getInstance().init(configuration);
+	}
+}
+```
+
+
+
 
 XML Usage
 -----
