@@ -36,6 +36,7 @@ FontyConfiguration configuration = FontyConfigurationBuilder.builder()
 	.fontEntity(MyFontyEntity .class)
 	.sourceTypo(FontySourceTypo.assets)
 	.extension(".ttf")
+	.path("base_path")
 	.build();
 ```
 
