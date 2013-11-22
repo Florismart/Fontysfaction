@@ -43,6 +43,7 @@ FontyConfiguration configuration = FontyConfigurationBuilder.builder()
 FontyEntity
 -----
 You can configure your FontyEntity via Annotations, only required one is @FontyEntity!
+![Screenshot](https://raw.github.com/FattoriniLuca/Fontysfaction/master/test-configuration.png)
 ```java
 //full configuration example
 @FontyPath("fonts")
