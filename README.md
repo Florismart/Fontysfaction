@@ -28,8 +28,57 @@ public class TestApplication extends Application {
 }
 ```
 
+Configuration
+-----
+All options in FontyConfiguration builder are optional. Use only those you really want to customize.
+```java
+FontyConfiguration configuration = FontyConfigurationBuilder.builder()
+	.fontEntity(MyFontyEntity .class)
+	.sourceTypo(FontySourceTypo.assets)
+	.extension(".ttf")
+	.build();
+```
 
+FontyEntity
+-----
+You can configure your FontyEntity via Annotations, only required one is @FontyEntity!
+```java
+//full configuration example
+@FontyPath("fonts")
+@FontyEntity
+public class MyFontyEntity {
 
+	@FontyIdentifier(FontyTypo.regular)
+	@FontyName("MyFont-Regular")
+	@FontyPath("myfont")
+	public String regular;
+
+	@FontyIdentifier(FontyTypo.bold)
+	@FontyName("MyFont-Bold")
+	@FontyPath("myfont")
+	public String bold;
+
+	@FontyIdentifier(FontyTypo.light)
+	@FontyName("MyFont-Light")
+	@FontyPath("myfont")
+	public String light;
+
+	@FontyIdentifier(FontyTypo.regular_italic)
+	@FontyName("MyFont-Regular-Italic")
+	@FontyPath("myfont")
+	public String regular_italic;
+
+	@FontyIdentifier(FontyTypo.bold_italic)
+	@FontyName("MyFont-Bold-Italic")
+	@FontyPath("myfont")
+	public String bold_italic;
+
+	@FontyIdentifier(FontyTypo.light_italic)
+	@FontyName("MyFont-Light-Italic")
+	@FontyPath("myfont")
+	public String light_italic;
+}
+```
 
 XML Usage
 -----
